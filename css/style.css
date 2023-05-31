@@ -1,5 +1,6 @@
 /****** General ***********/
 * {
+    /*border: solid 1px black;  A supprimer à la fin */
     font-family: 'Raleway', sans-serif;
 }
 
@@ -13,12 +14,13 @@
     color: var(--main-color);
 }
 
-body {
+body {    
+    margin: 0px;
     display: flex;
     justify-content: center;
 }
 
-.main-container {
+.main-container { 
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
@@ -51,6 +53,40 @@ body {
 
 .neutralStar {
     color: var(--main-bg-color)
+}
+
+/****** En-tête ***************/
+header {        
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 109px;
+    margin: 0 -7.39px 0 -50px;    /* A supprimer pour les versions hors-desktop */
+}
+
+header img {
+    width: 61.09px;
+    height: 19px;
+    padding: 30px;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;    
+    margin-top: 0px;    
+}
+
+nav li {
+    margin-left: 69px;
+    padding-top: 16px;
+      
+}
+
+nav li:hover {
+    color: var(--main-color);
+    border-top: solid 2px var(--main-color); 
+    padding-top: 14px;
 }
 
 /****** Hebergements And Populaires ***********/
