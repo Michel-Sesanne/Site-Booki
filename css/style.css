@@ -1,6 +1,6 @@
 /****** General ***********/
 * {
-    /*border: solid 1px black;  A supprimer à la fin */
+    /*border: dotted 1px black;   A supprimer à la fin */
     font-family: 'Raleway', sans-serif;
 }
 
@@ -87,6 +87,57 @@ nav li:hover {
     color: var(--main-color);
     border-top: solid 2px var(--main-color); 
     padding-top: 14px;
+}
+
+/****** Corps de page *********************/
+h1 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/****** formulaire de recherche ********/
+form {        
+    display: inline-flex;
+    border-top: solid var(--main-bg-color) 1px;
+    border-bottom: solid var(--main-bg-color) 1px;
+    border-radius: 15px;
+    margin: 1em 0 2em 0;
+}
+
+label {
+    background-color: var(--main-bg-color);
+    justify-content: center;
+    align-items: center;
+    padding: 15px 18px;
+    border-radius: 15px 0 0 15px;
+}
+
+.fa-location-dot {
+    color: black;    
+}
+
+input {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    width: 11em;
+    border-style: none;    
+}
+
+button {
+    font-weight: 700;
+    font-size: 18px;
+    background-color: var(--main-color);
+    color: #FFFFFF;    
+    border-radius: 0 15px 15px 0;
+    border: none;
+    padding: 14px 16px;
+}
+.fa-magnifying-glass {
+    display: none;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -194,5 +245,19 @@ nav li:hover {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    /* Remplacer le mot "Rechercher" par l'icône "loupe" dans le formulaire de recherche */
+    button {   
+        border-radius: 15px;
+        padding: 16px;
+        margin-left: auto;
+    }
+    button span {
+        display: none;
+    }
+    .fa-magnifying-glass {
+        display: block;
+        color: #FFFFFF;
+        width: 17px;
+        height: 17px;
+    }
 }
