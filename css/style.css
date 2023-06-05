@@ -1,6 +1,6 @@
 /****** General ***********/
 * {
-    /*border: dotted 1px black;   A supprimer à la fin */
+    /* border: dotted 1px black;  A supprimer à la fin */
     font-family: 'Raleway', sans-serif;
 }
 
@@ -60,8 +60,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 109px;
-    margin: 0 -7.39px 0 -50px;    /* A supprimer pour les versions hors-desktop */
+    height: 79px;
+    margin: 0 -7.39px 30px -50px;    /* A supprimer pour les versions hors-desktop */
 }
 
 header img {
@@ -90,24 +90,37 @@ nav li:hover {
 }
 
 /****** Corps de page *********************/
-h1 {
-    font-size: 22px;
+h1, h2, span {
+    font-weight: 700;
 }
 
-p {
+.headline {
+    display: flex;
+    flex-direction: column;    
+}
+
+h1 {
+    font-size: 22px;
+    margin: 0 0 8px 0;
+}
+
+.headline p {
     font-size: 16px;
+    font-weight: 400;
+    margin: 0;
 }
 
 /****** formulaire de recherche ********/
-form {        
+.search-bar {        
     display: inline-flex;
     border-top: solid var(--main-bg-color) 1px;
     border-bottom: solid var(--main-bg-color) 1px;
     border-radius: 15px;
-    margin: 1em 0 2em 0;
+    font-size: 18px;
+    margin: 35px 0;
 }
 
-label {
+.location-label {
     background-color: var(--main-bg-color);
     justify-content: center;
     align-items: center;
@@ -116,20 +129,21 @@ label {
 }
 
 .fa-location-dot {
-    color: black;    
+    color: black; 
+    font-size: 1em;   
 }
 
-input {
+.search-input {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1em;
     text-align: center;
     width: 11em;
     border-style: none;    
 }
 
-button {
+.search-button {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1em;
     background-color: var(--main-color);
     color: #FFFFFF;    
     border-radius: 0 15px 15px 0;
@@ -138,6 +152,74 @@ button {
 }
 .fa-magnifying-glass {
     display: none;
+}
+
+/****** Filtres **********/
+.filter-bar {
+    display: flex;
+    font-weight: 700;
+    font-size: 18px;
+    align-items: center;
+}
+
+.filter-bar span {
+    margin-right: 5px;
+}
+.filter-button{
+    display: flex;
+    align-items: center;
+}
+.filter-button button {
+    display: flex;
+    align-items: center;    
+    box-sizing: border-box;
+    height: 50px;
+    background-color: #FFFFFF;
+    margin: 0 8px;
+    padding: 17px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+}
+
+.filter-button :hover {
+    background-color: var(--filter-bg-color);
+}
+
+.filter-button i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.filter-button .fa-money-bill-wave {
+    font-size: 19px;
+}
+
+.button {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/****** Information ******/
+.info-bar {
+    display: flex;
+    align-items: center;
+    margin: 35px 0;
+    height: 24px;
+}
+.circle-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border: 1px solid #D9D9D9;
+    margin-right: 10px;
+}
+
+.fa-info {
+    color: var(--main-color);
+    font-size: 10px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -246,12 +328,12 @@ button {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* Remplacer le mot "Rechercher" par l'icône "loupe" dans le formulaire de recherche */
-    button {   
+    .search-button {   
         border-radius: 15px;
         padding: 16px;
         margin-left: auto;
     }
-    button span {
+    .search-span {
         display: none;
     }
     .fa-magnifying-glass {
