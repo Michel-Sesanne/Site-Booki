@@ -1,7 +1,7 @@
 /****** General ***********/
 * {
     /*border: dotted 1px black;   A supprimer à la fin */
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;    
 }
 
 :root {
@@ -55,6 +55,10 @@ body {
     color: var(--main-bg-color)
 }
 
+span {
+    font-weight: 700;
+}
+
 a {
     text-decoration: none;
     color: black;      
@@ -95,17 +99,12 @@ nav li:hover {
 }
 
 /****** Corps de page *********************/
-h1, h2, span {
-    font-weight: 700;
-}
-
 .headline {
     display: flex;
     flex-direction: column;    
 }
 
 .headline p {
-    font-size: 16px;
     margin: 8px 0 0 0;
 }
 
@@ -164,6 +163,7 @@ h1, h2, span {
 .filter-bar span {
     margin-right: 5px;
 }
+
 .filter-button{
     display: flex;
     align-items: center;
@@ -368,6 +368,22 @@ h1, h2, span {
     padding: 0 19px;
 }
 
+/****** Footer ************/
+footer {
+    display: flex;
+    background-color: var(--main-bg-color);
+}
+
+footer ul {
+    width: calc(100% / 3);
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.footer-link {
+    margin-top: 15px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
