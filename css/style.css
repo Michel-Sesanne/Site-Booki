@@ -247,8 +247,6 @@ h1, h2, span {
 }
 
 .hebergements-cards .card {
-    display: flex;
-    flex-direction: column;
     margin-top: 30px;
     box-sizing: border-box;
     width: calc((100% - 60px) / 3);
@@ -300,7 +298,6 @@ h1, h2, span {
 }
 
 .populaires-cards .card {
-    display: flex;
     margin-top: 33px;
 }
 
@@ -341,8 +338,33 @@ h1, h2, span {
 /****** Activités ************/
 .activites {
     margin: 35px 0;
+    padding: 30px;
 }
 
+.activites-cards {
+    margin-top: 30px;
+}
+
+.activites-cards .card {
+    width: calc((100% - 90px) / 4);
+    padding: 0;
+}
+
+.activites-cards img {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+}
+
+.activites-cards .card a {
+    display: flex;
+    flex-direction: column;
+}
+
+.activites-cards .card-content {
+    padding: 0 19px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
