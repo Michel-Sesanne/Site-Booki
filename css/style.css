@@ -18,6 +18,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
+    
 }
 
 .main-container { 
@@ -182,6 +183,7 @@ nav li:hover {
 
 .filter-button :hover {
     background-color: var(--filter-bg-color);
+    cursor: pointer;
 }
 
 .filter-button i {
@@ -195,7 +197,7 @@ nav li:hover {
 
 .button {
     font-weight: 700;
-    font-size: 17px;
+    font-size: 17px;    
 }
 
 /****** Information ******/
@@ -205,7 +207,10 @@ nav li:hover {
     margin: 35px 0;
     height: 24px;
 }
-.circle-info {
+
+.fa-info {
+    color: var(--main-color);
+    font-size: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,11 +219,6 @@ nav li:hover {
     border-radius: 12px;
     border: 1px solid #D9D9D9;
     margin-right: 10px;
-}
-
-.fa-info {
-    color: var(--main-color);
-    font-size: 10px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -387,6 +387,19 @@ footer ul {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+/* Cas particulier de l'en-tête sur desktop */
+@media (max-width: 1024px) {
+    header {
+        margin: 0 0 30px -30px;
+    }
+}
+
+@media (min-width: 1440px) {
+    header {
+        margin: 0 0 30px -30px;
+    }
+}
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
