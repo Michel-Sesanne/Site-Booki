@@ -71,7 +71,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     height: 79px;
-    margin: 0 -7.39px 30px -50px;    /* A supprimer pour les versions hors-desktop */
+    margin: 0 -7.39px 30px -50px;
 }
 
 header img {
@@ -111,12 +111,14 @@ nav li:hover {
 
 /****** formulaire de recherche ********/
 .search-bar {        
-    display: inline-flex;
+    display: flex;
     border-top: solid var(--main-bg-color) 1px;
     border-bottom: solid var(--main-bg-color) 1px;
     border-radius: 15px;
     font-size: 18px;
     margin: 35px 0;
+    width: 377px;
+    height: 49px;
 }
 
 .location-label {
@@ -125,19 +127,19 @@ nav li:hover {
     align-items: center;
     padding: 15px 18px;
     border-radius: 15px 0 0 15px;
+    width: 50px;
 }
 
 .fa-location-dot {
-    color: black; 
-    font-size: 1em;   
+    color: black;  
 }
 
 .search-input {
     font-weight: 700;
     font-size: 1em;
     text-align: center;
-    width: 11em;
-    border-style: none;    
+    border-style: none;
+    width: 195px;    
 }
 
 .search-button {
@@ -148,14 +150,19 @@ nav li:hover {
     border-radius: 0 15px 15px 0;
     border: none;
     padding: 14px 16px;
+    width: 132px;
 }
 .fa-magnifying-glass {
     display: none;
 }
 
+.search-button :hover {
+    cursor: pointer;
+}
+
 /****** Filtres **********/
 .filter-bar {
-    display: flex;
+    display: inline-flex;
     font-weight: 700;
     font-size: 18px;
     align-items: center;
@@ -362,10 +369,15 @@ nav li:hover {
 .activites-cards .card a {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .activites-cards .card-content {
     padding: 0 19px;
+    height: calc(100% - 380px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 /****** Footer ************/
@@ -402,6 +414,17 @@ footer ul {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .filter-bar {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 91px;
+    }
+
+    .filter-button {
+        margin: 0 -10px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -431,6 +454,14 @@ footer ul {
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
+    }
+
+    .activites-cards img {
+        height: 200px;
+    }
+
+    .activites-cards .card-content {
+        height: calc(100% - 200px);
     }
 }
 
